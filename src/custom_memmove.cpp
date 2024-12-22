@@ -4,10 +4,12 @@
 
 namespace custom {
 
+#ifndef CONFIG_CUSTOM_MEMMOVE_FALLBACK_TO_NAIVE
 static inline std::size_t _calcChunkSize(const void* const dest, const void* const src) {
     if (dest > src) return (uint8_t*)dest - (uint8_t*)src;
     return (uint8_t*)src - (uint8_t*)dest;
 }
+#endif
 
 void* memmove(void* const d, const void* const s, std::size_t n) {
 #ifdef CONFIG_CUSTOM_MEMMOVE_FALLBACK_TO_NAIVE
