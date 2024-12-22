@@ -20,7 +20,7 @@ TEST_OBJS = $(TEST_SRCS:$(TEST_DIR)/%.cpp=$(BUILD_DIR)/%.o)
 TEST_BIN = $(BUILD_DIR)/test_main
 
 # Target executable
-TARGET = $(BUILD_DIR)/libfancy_memmove.a
+TARGET = $(BUILD_DIR)/libcustom_memmove.a
 
 # Default target
 all: $(TARGET) $(TEST_BIN)
